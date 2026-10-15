@@ -37,4 +37,4 @@ Projeto em desenvolvimento.
 
 ---
 
-Desenvolvido para a marca **Trama & Lar**.
+Desenvolvido para a marca **K & A**.
