@@ -1,6 +1,6 @@
-# Trama & Lar 🏡
+# K & A 🏡
 
-A **Trama & Lar** é uma loja virtual dedicada à apresentação e comercialização de tapetes artesanais e itens decorativos. O projeto busca oferecer uma experiência de navegação moderna, elegante e responsiva, valorizando o design e os detalhes de cada produto.
+A **K & A** é uma loja virtual dedicada à apresentação e comercialização de tapetes artesanais e itens decorativos. O projeto busca oferecer uma experiência de navegação moderna, elegante e responsiva, valorizando o design e os detalhes de cada produto.
 
 ## ✨ Funcionalidades
 
