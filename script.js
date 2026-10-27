@@ -777,7 +777,8 @@ const SLIDES = [
     ['#8d8a82', '#f1ece1', '#7a5236'],
     '#eadfca',
     '#4f5a34',
-    './tapetes/salaNordica.jpg'
+    './tapetes/salaNordica.jpg',
+    INSTA
   ],
   [
     'Quarto aconchegante em tom areia',
@@ -785,7 +786,8 @@ const SLIDES = [
     ['#e6dac4', '#f7f1e3', '#cdb994'],
     '#e4d6bd',
     '#a88b66',
-    './tapetes/tomAreia.jpg'
+    './tapetes/tomAreia.jpg',
+    INSTA
   ],
   [
     'Corredor com passadeira listrada',
@@ -793,7 +795,8 @@ const SLIDES = [
     ['#7a5236', '#e3d3b4', '#b08d3c'],
     '#d9cdb4',
     '#6f6a5f',
-    './tapetes/passadeiraListrada.jpg'
+    './tapetes/passadeiraListrada.jpg',
+    INSTA
   ],
   [
     'Sala clássica com tapete persa',
@@ -801,7 +804,8 @@ const SLIDES = [
     ['#7b2f2a', '#e8d9b0', '#2f3d4f'],
     '#e9dcc0',
     '#2f3d4f',
-    './tapetes/salaClassica.jpg'
+    './tapetes/salaClassica.jpg',
+    INSTA
   ],
   [
     'Varanda com juta natural',
@@ -809,7 +813,8 @@ const SLIDES = [
     ['#b99a6b', '#d9c39a', '#7a5236'],
     '#dfd2b5',
     '#4f5a34',
-    './tapetes/varanda.jpg'
+    './tapetes/varanda.jpg',
+    INSTA
   ],
   [
     'Sala com ondas em tons nude',
@@ -817,7 +822,8 @@ const SLIDES = [
     ['#d8c7a8', '#f5efe2', '#a88b66'],
     '#ece3d0',
     '#7a5236',
-    './tapetes/salaNude.jpg'
+    './tapetes/salaNude.jpg',
+    INSTA
   ]
 ];
 
