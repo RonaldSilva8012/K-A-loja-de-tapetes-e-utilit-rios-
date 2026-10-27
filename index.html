@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>K & A | Utilidades com Charme</title>
+  <meta name="description" content="Tapetes artesanais e decorativos para sala, quarto e corredor. Peça pelo WhatsApp.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="img/icone.ico">
+</head>
+<body>
+
+<!-- ========== CABEÇALHO ========== -->
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="logo" href="#inicio" aria-label="K & A - início">
+     <img src="img/logo.png" alt="Logo K & A" width="90px" />     
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+    <nav class="nav" id="nav" aria-label="Principal">
+      <a href="#inicio">Início</a>
+      <a href="#catalogo">Coleções</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#instagram">Instagram</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <div class="search">
+      <label class="sr" for="busca">Buscar itens</label>
+      <input id="busca" type="search" placeholder="Buscar itens…" autocomplete="off">
+    </div>
+    <button class="cart-btn" id="openCart" aria-label="Abrir carrinho">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h2l2.4 11.2a1 1 0 0 0 1 .8h8.9a1 1 0 0 0 1-.8L20 8H6"/><circle cx="9.5" cy="20" r="1.3"/><circle cx="17" cy="20" r="1.3"/></svg>
+      <span class="badge" id="count" aria-live="polite">0</span>
+    </button>
+  </div>
+</header>
+
+<main id="inicio">
+  <!-- ========== HERO ========== -->
+  <div class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <h1>Conforto, estilo e elegância para o seu lar</h1>
+        <p>Tapetes artesanais e decorativos feitos para dar calor a cada ambiente, da sala ao quarto, do corredor à varanda.</p>
+        <div class="actions">
+          <a class="btn gold" href="#catalogo" id="cta">Explorar tapetes</a>
+          <a class="btn ghost" href="#instagram">Ver ambientes</a>
+        </div>
+      </div>
+
+       <div id="heroRug" class="hero-rug ka-animation" role="button" tabindex="0" aria-label="Clique para iniciar a animação artesanal da marca KA">
+        <div class="ka-paper-grain" aria-hidden="true"></div>
+        <div class="ka-brand">
+          <div class="ka-logo-stage"><canvas id="threadCanvas" aria-label="Letras KA sendo costuradas com fios"></canvas><span class="ka-ampersand" aria-hidden="true">&amp;</span></div>
+          <h2>Utilidades com Charme</h2>
+          <div class="ka-palette" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+          <p class="ka-hint">Toque ou clique para revelar a animação</p>
+        </div>
+      </div>
+
+      <!-- <div id="heroRug" class="hero-rug" role="img" aria-label="Tapete geométrico em tons terrosos"></div> -->
+    </div>
+  </div>
+
+  <!-- ========== CATÁLOGO (INTEGRAÇÃO COM SANITY CMS) ========== -->
+  <section id="catalogo">
+    <div class="wrap">
+      <h2 class="sec-title">Nossas coleções</h2>
+      <p class="sec-sub">Escolha o tamanho em cada tapete e monte seu pedido. A finalização é feita pelo WhatsApp.</p>
+      
+      <div class="filters" id="filters" role="group" aria-label="Filtrar por categoria"></div>
+      
+      <!-- O JS renderizará os produtos do Sanity aqui dentro de #grid -->
+      <div class="grid" id="grid" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- ========== INSTAGRAM ========== -->
+  <section class="insta" id="instagram">
+    <div class="wrap">
+      <h2 class="sec-title">Inspire-se: nossos tapetes na sua casa</h2>
+      <p class="sec-sub">Siga <a href="https://www.instagram.com/kea.utilidadescomcharme" target="_blank" rel="noopener"><b>@kea.utilidadescomcharme</b></a> e veja ambientes decorados todos os dias.</p>
+      <div class="carousel">
+        <button class="nav-arrow prev" id="prev" aria-label="Anterior">‹</button>
+        <div class="viewport"><div class="track" id="track"></div></div>
+        <button class="nav-arrow next" id="next" aria-label="Próximo">›</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SOBRE ========== -->
+  <section id="sobre">
+    <div class="wrap about">
+      <div>
+        <h2 class="sec-title">Feito para ser vivido</h2>
+        <p>Cada tapete da K &amp; A é escolhido pela textura, pela resistência e pelo jeito que muda o clima de um cômodo. Trabalhamos com algodão, juta, poliéster de alta densidade e lã, em modelos que combinam com estilos clássicos, nórdicos e contemporâneos.</p>
+        <p>Não sabe qual tamanho comprar? Mande a medida do ambiente pelo WhatsApp e indicamos a melhor opção.</p>
+      </div>
+      <div class="facts">
+        <div class="fact"><b>Acabamento artesanal</b>Costuras reforçadas e franjas feitas à mão.</div>
+        <div class="fact"><b>Atendimento direto</b>Você fecha o pedido conversando com a loja.</div>
+        <div class="fact"><b>Troca em 7 dias</b>Se o tapete não combinar com o ambiente, trocamos.</div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ========== RODAPÉ ========== -->
+<footer id="contato">
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <h3>Links úteis</h3>
+        <ul><li><a href="#catalogo">Coleções</a></li><li><a href="#sobre">Sobre a loja</a></li><li><a href="#instagram">Instagram</a></li><li><a href="https://wa.me/5531996335286" target="_blank" rel="noopener">Fale conosco</a></li></ul>
+      </div>
+      <div>
+        <h3>Frete e entrega</h3>
+        <ul><li>Envio para todo o Brasil</li><li>Prazo e valor calculados pelo CEP</li><li>Retirada combinada pelo WhatsApp</li></ul>
+      </div>
+      <div>
+        <h3>Cuidados e limpeza</h3>
+        <ul><li>Aspire semanalmente</li><li>Limpe manchas na hora com pano úmido</li><li>Evite sol direto prolongado</li><li>Lave conforme a etiqueta do modelo</li></ul>
+      </div>
+      <div>
+        <h3>Pagamento</h3>
+        <ul><li>Pix</li><li>Cartão de crédito em até 6x</li><li>Boleto sob consulta</li></ul>
+        <h3 style="margin-top:1.2rem">Redes sociais</h3>
+        <ul><li><a href="https://www.instagram.com/kea.utilidadescomcharme" target="_blank" rel="noopener">Instagram @kea.utilidadescomcharme</a></li><li><a href="https://wa.me/5531996335286" target="_blank" rel="noopener">WhatsApp</a></li></ul>
+      </div>
+    </div>
+    <p class="copy">© <span id="year"></span> K &amp; A. Todos os direitos reservados. Os preços são estimativas e podem ser confirmados no atendimento.</p>
+  </div>
+</footer>
+
+<!-- ========== CARRINHO ========== -->
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer" aria-label="Carrinho de compras" aria-hidden="true">
+  <header><h2>Seu carrinho</h2><button class="close" id="closeCart" aria-label="Fechar carrinho">×</button></header>
+  <div class="items" id="items"></div>
+  <div class="foot">
+    <div class="total"><span>Total estimado</span><span id="total">R$ 0,00</span></div>
+    <a class="btn gold" id="checkout" href="#" target="_blank" rel="noopener" aria-disabled="true">Finalizar pedido via WhatsApp</a>
+    <small>Frete calculated no atendimento.</small>
+  </div>
+</aside>
+<div class="toast" id="toast" role="status"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
