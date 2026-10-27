@@ -18,6 +18,8 @@ const $ = s => document.querySelector(s);
 let PRODUCTS = [];
 let CATEGORIES = ['Todos'];
 
+
+
 /* ========== BUSCA DE DADOS DO SANITY ========== */
 
 
@@ -58,26 +60,25 @@ async function fetchProductsFromSanity() {
       throw new Error('A resposta do Sanity não contém uma lista de produtos.');
     }
 
-    const catsSet = new Set([
-      'Todos',
-      'Tapetes',
-      'Panos de Prato',
-      'Outros'
-    ]);
+    // ✅ ALTERAÇÃO AQUI: Começa apenas com 'Todos'. 
+    // As demais categorias virão estritamente do que for cadastrado nos produtos.
+    const catsSet = new Set(['Todos']);
 
     PRODUCTS = data.result.map(p => {
-      let catName = 'Tapetes';
+      // Define o nome legível da categoria com base no que veio do Sanity
+      let catName = 'Geral';
 
-      if (p.category === 'panos-de-prato') {
-        catName = 'Panos de Prato';
-      } else if (p.category === 'outros') {
-        catName = p.customCategory
-          ? String(p.customCategory).trim()
-          : 'Outros';
-      } else if (p.category === 'tapetes') {
-        catName = 'Tapetes';
+      if (p.category) {
+        // Se houver uma customCategory preenchida (ex: em 'outros'), usa ela, senão formata a category
+        if (p.category === 'outros' && p.customCategory) {
+          catName = String(p.customCategory).trim();
+        } else {
+          // Transforma slugs como 'panos-de-prato' em algo legível ou usa o valor direto
+          catName = String(p.category).trim();
+        }
       }
 
+      // Adiciona dinamicamente ao conjunto de categorias
       catsSet.add(catName);
 
       const basePrice = typeof p.price === 'string'
@@ -112,9 +113,8 @@ async function fetchProductsFromSanity() {
         id: p._id,
         name: p.title || 'Produto sem nome',
         cat: catName,
-        categoryKey: p.category || 'tapetes',
+        categoryKey: p.category || '',
         customCategory: p.customCategory || '',
-        // 2. Mapeando a descrição do Sanity (com fallback caso esteja vazia)
         mat: p.description ? p.description.trim() : 'Produto artesanal / decorativo',
         imageUrl: p.imageUrl || '',
         price: basePrice,
