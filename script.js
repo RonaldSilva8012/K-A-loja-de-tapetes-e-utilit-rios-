@@ -1,7 +1,7 @@
 /* ========== CONFIGURAÇÕES E SANITY ========== */
 
 const WHATS = '5531996493784';
-const INSTA = 'https://www.instagram.com/@kea.utilidadescomcharme';
+const INSTA = 'https://www.instagram.com/kea.utilidadescomcharme';
 
 const PROJECT_ID = 'xgeit2av';
 const DATASET = 'production';
@@ -1201,6 +1201,10 @@ function iniciarSite() {
   fetchProductsFromSanity().catch(error => {
     console.error('Erro ao iniciar o carregamento dos produtos:', error);
   });
+
+  if (track) {
+    buildCarousel();
+  }
 }
 
 // Funciona tanto se o HTML ainda estiver carregando
