@@ -16,7 +16,7 @@ const $ = s => document.querySelector(s);
 /* ========== PRODUTOS E CATEGORIAS ========== */
 
 let PRODUCTS = [];
-let CATEGORIES = ['Todos', 'Tapetes', 'Panos de Prato', 'Outros'];
+let CATEGORIES = ['Todos'];
 
 /* ========== BUSCA DE DADOS DO SANITY ========== */
 
